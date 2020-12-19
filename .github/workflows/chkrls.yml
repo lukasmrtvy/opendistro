@@ -12,7 +12,6 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'opendistro-for-elasticsearch/opendistro-build'
-        fetch-depth: 0
 
     - name: Configure Git
       run: |
