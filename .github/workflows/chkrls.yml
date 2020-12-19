@@ -18,6 +18,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         charts_dir: helm/
+        linting: off
 
 
     #- name: Configure Git
