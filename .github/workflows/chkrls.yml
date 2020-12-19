@@ -11,4 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: 'https://github.com/opendistro-for-elasticsearch/opendistro-build'
+        repository: 'opendistro-for-elasticsearch/opendistro-build'
+        fetch-depth: 0
