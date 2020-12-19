@@ -1,0 +1,14 @@
+name: check&release
+
+on:
+  schedule:
+  - cron:  "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: 'https://github.com/opendistro-for-elasticsearch/opendistro-build'
