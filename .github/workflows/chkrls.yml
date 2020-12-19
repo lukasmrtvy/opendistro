@@ -13,27 +13,26 @@ jobs:
       with:
         repository: 'opendistro-for-elasticsearch/opendistro-build'
 
-    - name: Configure Git
-      run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-        touch a
-        echo "1" > a
-        git add .
-        git commit -m "test"
+      - name: Publish Helm chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          charts_dir: helm/
 
-    - name: Install Helm
-      uses: azure/setup-helm@v1
-      with:
-        version: v3.4.0
 
-    - name: list
-      run: |
-        ls -lha .
-        
-    - name: Run chart-releaser
-      uses: helm/chart-releaser-action@v1.1.0
-      with:
-        charts_dir: helm/
-      env:
-        CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    #- name: Configure Git
+    #  run: |
+    #    git config user.name "$GITHUB_ACTOR"
+    #    git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+
+    #- name: Install Helm
+    # uses: azure/setup-helm@v1
+    #  with:
+    #    version: v3.4.0
+    #- name: Run chart-releaser
+    #  uses: helm/chart-releaser-action@v1.1.0
+    #  with:
+    #    charts_dir: helm/
+    #  env:
+    #    CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
