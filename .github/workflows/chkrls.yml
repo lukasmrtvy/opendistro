@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'opendistro-for-elasticsearch/opendistro-build'
-        #fetch-depth: 0
+        fetch-depth: 0
 
     - name: Configure Git
       run: |
@@ -24,6 +24,10 @@ jobs:
       with:
         version: v3.4.0
 
+    - name: list
+      run: |
+        ls -lha .
+        
     - name: Run chart-releaser
       uses: helm/chart-releaser-action@v1.1.0
       with:
