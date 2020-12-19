@@ -2,7 +2,7 @@ name: check&release
 
 on:
   schedule:
-  - cron:  "*/15 * * * *"
+  - cron:  "0 1 * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,21 +19,3 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         charts_dir: helm/
         linting: off
-
-
-    #- name: Configure Git
-    #  run: |
-    #    git config user.name "$GITHUB_ACTOR"
-    #    git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-
-    #- name: Install Helm
-    # uses: azure/setup-helm@v1
-    #  with:
-    #    version: v3.4.0
-    #- name: Run chart-releaser
-    #  uses: helm/chart-releaser-action@v1.1.0
-    #  with:
-    #    charts_dir: helm/
-    #  env:
-    #    CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
