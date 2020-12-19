@@ -13,11 +13,11 @@ jobs:
       with:
         repository: 'opendistro-for-elasticsearch/opendistro-build'
 
-      - name: Publish Helm chart
-        uses: stefanprodan/helm-gh-pages@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          charts_dir: helm/
+    - name: Publish Helm chart
+      uses: stefanprodan/helm-gh-pages@master
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        charts_dir: helm/
 
 
     #- name: Configure Git
