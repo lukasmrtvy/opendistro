@@ -3,9 +3,9 @@ entries:
   opendistro-es:
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2021-02-03T01:48:57.793373433Z"
+    created: "2021-02-04T01:39:50.093810422Z"
     description: Open Distro for Elasticsearch
-    digest: 400a034eb940172f67095ccd381a8cf8a5498530f616069424fb4412acb8cd2b
+    digest: bfde7d5e4851f337cdda4bf814c596f01840f5f38faec51e3633e2fb6c9f7ee8
     kubeVersion: ^1.10.0-0
     maintainers:
     - email: derek.heldt-werle@viasat.com
@@ -18,4 +18,4 @@ entries:
     urls:
     - https://lukasmrtvy.github.io/opendistro/opendistro-es-1.12.0.tgz
     version: 1.12.0
-generated: "2021-02-03T01:48:57.790404214Z"
+generated: "2021-02-04T01:39:50.091580494Z"
